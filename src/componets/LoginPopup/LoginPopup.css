@@ -1,0 +1,120 @@
+
+/* Full screen dark overlay */
+.loginpopup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: grid;
+
+  z-index: 1;
+}
+
+/* Main container */
+.login-popup-container {
+  background: #fff;
+  place-self: center;
+  color:#808080;
+  padding: 25px 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap:25px;
+  animation: popupFadeIn 0.3s ease;
+  position: relative;
+}
+
+/* Title + close button */
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.login-popup-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.login-popup-title img {
+  width: 16px;
+  height: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+/* Input fields */
+.login-popup-imputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-popup-imputs input {
+  padding:10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  outline: none;
+ 
+}
+
+
+
+/* Button */
+.login-popup-container button {
+  background-color:tomato;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+
+/* Checkbox + terms */
+.login-popup-condition {
+  display: flex;
+  align-items:start;
+  gap: 8px;
+  margin-top: -15px;
+}
+
+.login-popup-condition input {
+  margin-top: 5px;
+}
+
+
+
+.login-popup-container p span {
+  color: tomato;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.login-popup-container p span:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes popupFadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
